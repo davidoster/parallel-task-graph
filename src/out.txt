@@ -1,0 +1,43 @@
+
+nthreads: 22
+
+all nodes' info:
+node_1: level=0 d=2
+node_2: level=1 d=2
+node_3: level=1 d=1
+node_4: level=2 d=2
+node_5: level=2 d=0
+node_6: level=2 d=0
+node_7: level=3 d=0
+node_8: level=3 d=0
+
+tree-struction:
+4 7
+4 8
+2 5
+2 6
+3 4
+1 2
+1 3
+
+add task_7
+add task_8
+add task_6
+add task_5
+add task_4
+add task_2
+add task_3
+add task_1
+
+result:
+task_1: x5 x6 x2 x7 x8 x4 x3 x1
+task_2: x5 x6 x2
+task_3: x7 x8 x4 x3
+task_4: x7 x8 x4
+task_5: x5
+task_6: x6
+task_7: x7
+task_8: x8
+
+topological sorting execution time: 0.00 s
+process all tasks execution time: 4.01 s
