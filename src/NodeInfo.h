@@ -23,14 +23,6 @@ public:
         level = _level;
     }
 
-    // bool operator<(const NodeInfo &node) const {
-    //     return level < node.level;
-    // }
-
-    // bool operator>(const NodeInfo &node) const {
-    //     return level > node.level;
-    // }
-
 public:
     Task *p_task;
     int n_dependency;

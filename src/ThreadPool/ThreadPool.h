@@ -16,9 +16,9 @@ public:
         stop = false;
 
         while(num_threads--){
-            threads.emplace_back(thread(   // emplace_back avoids the extra copy or move operation required when using push_back.
+            threads.emplace_back(thread(
                 [this](){
-                    while(true){    // these threads always run, waiting for job to do.
+                    while(true){
 
                         function<void()> task;
 
@@ -39,7 +39,6 @@ public:
         }
     }
 
-    // add job to jobQueue
     template<class Function, class... Args>
     auto add_job(Function&& f, Args&&... args)
         -> future<typename std::result_of<Function(Args...)>::type> 
